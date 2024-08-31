@@ -14,12 +14,12 @@ public class DemoControllerForConstructorInjection {
 
 
     //define a private field for dependency
-    private Coach myCoach;
+    private final Coach myCoach;
 
 
     // define a constructor for dependency injection
     @Autowired
-    public DemoControllerForConstructorInjection(@Qualifier("tennisCoach") Coach theCoach){
+    public DemoControllerForConstructorInjection(@Qualifier("swimmCoach") Coach theCoach){
         myCoach=theCoach;
         System.out.println("in constructor:"+getClass().getSimpleName());
     }
